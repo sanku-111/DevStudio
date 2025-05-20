@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #121212;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+
+.hero-text {
+  max-width: 40%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #00bfff;
+}
+
+.hero-text p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.hero-img img {
+  width: 450px; /* or any size you prefer, like 500px */
+  height: auto; /* keeps the aspect ratio */
+  border-radius: 20px;
+  transition: 0.3s ease-in-out; /* optional smooth resizing effect */
+}
+
+
+.side-content {
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.side-content h3, .side-content h4 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.side-content p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.side-content a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: white;
+}
