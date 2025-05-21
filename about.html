@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,13 +19,17 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3 {
-      text-align: center;
+    /* Header Styling */
+    h1,
+    h2,
+    h3 {
+      text-align: left;
       margin-top: 20px;
-      color: white;
+      color: #00bfff;
       text-shadow: none;
     }
 
+    /* Link Styling */
     a {
       color: white;
       text-decoration: none;
@@ -33,7 +38,7 @@
     }
 
     a:hover {
-      color: #ccc;
+      color: #00aaff;
       text-decoration: underline;
     }
 
@@ -46,33 +51,45 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
-      padding: 30px;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
 
+    /* Card-like section */
     .section {
       background: #121212;
-      border: 2px solid #333;
+      border: 1px solid #2e2e2e;
       border-radius: 15px;
-      padding: 25px;
-      margin: 25px 0;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      padding: 30px;
+      box-shadow: 0 4px 25px rgba(0, 170, 255, 0.05);
+      transition: all 0.4s ease;
     }
 
     .section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 170, 255, 0.2);
     }
 
+    /* Lists */
     ul {
-      list-style-type: square;
-      margin-left: 30px;
+      list-style-type: none;
+      margin-left: 0;
       line-height: 1.8;
-      color: white;
+      padding-left: 0;
+      color: #ddd;
     }
 
+    ul li::before {
+      content: "▹";
+      color: #00aaff;
+      margin-right: 10px;
+    }
+
+    /* Preformatted code */
     pre {
       background-color: #1f1f1f;
       padding: 15px;
@@ -82,54 +99,77 @@
       font-size: 16px;
     }
 
+    /* Navbar Styles */
+    .navbar {
+      background-color: #0d0d0d;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
       .container {
-        padding: 15px;
+        padding: 20px;
       }
 
       .section {
-        padding: 15px;
+        padding: 20px;
       }
 
       pre {
         font-size: 14px;
       }
 
-      .top-right {
-        font-size: 14px;
-        padding: 10px;
+      .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
       }
-    }
 
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 16px;
+      .navbar a {
+        margin: 10px;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- Home Link -->
-  <div class="top-right">
+  <div class="navbar">
     <a href="index.html">Home</a>
   </div>
 
   <div class="container">
-    
+
     <div class="section">
       <h2>About Me</h2>
-      <pre>
-Name: Sanket  
-Date of Birth: 11-01-2005  
-      </pre>
+      <ul>
+        <li>Name: Sanket</li>
+        <li>Date of Birth: 11-01-2005 </li>
+
+      </ul>
     </div>
 
     <div class="section">
       <h2>Education</h2>
       <ul>
-        <li>Currently pursuing B.Tech from <a href="https://www.dtu.ac.in/" target="_blank">Delhi Technological University (DTU)</a></li>
-        <li>Completed schooling from <a href="https://www.cbse.gov.in/" target="_blank">RPVV (affiliated to CBSE)</a></li>
+        <li>Currently pursuing B.Tech from <a href="https://www.dtu.ac.in/" target="_blank">Delhi Technological
+            University (DTU)</a></li>
+        <li>Completed schooling from <a href="https://www.cbse.gov.in/" target="_blank">RPVV (affiliated to CBSE)</a>
+        </li>
       </ul>
     </div>
 
@@ -148,4 +188,5 @@ Date of Birth: 11-01-2005
     </div>
   </div>
 </body>
+
 </html>
