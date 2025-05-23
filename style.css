@@ -14,17 +14,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 40px;
   background-color: #121212;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navbar a {
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
   color: #ccc;
   transition: 0.3s;
@@ -39,14 +46,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 60px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .hero-text {
+  flex: 1 1 300px;
   max-width: 40%;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
@@ -59,38 +69,24 @@ body {
   line-height: 1.6;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
 .hero-img img {
-  width: 450px; /* or any size you prefer, like 500px */
-  height: auto; /* keeps the aspect ratio */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 20px;
-  transition: 0.3s ease-in-out; /* optional smooth resizing effect */
+  transition: 0.3s ease-in-out;
 }
-
 
 .side-content {
+  flex: 1 1 250px;
   max-width: 20%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.side-content h3, .side-content h4 {
+.side-content h3,
+.side-content h4 {
   margin-bottom: 10px;
   color: #fff;
 }
@@ -116,4 +112,62 @@ body {
 
 .socials a:hover {
   color: white;
+}
+
+/* ====== Responsive Styling ====== */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .side-content {
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .side-content > div {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .side-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .side-content > div {
+    flex: 1 1 100%;
+  }
 }
